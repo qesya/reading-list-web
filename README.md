@@ -89,13 +89,13 @@ npm run lint
 
 ![Test Passed](docs/test.png)
 
-### Desktop Demo
+### Desktop ( WEB ) Demo
 
-<video src="docs/dekstop-mode.mov" controls loop></video>
+[▶️ Watch Desktop Mode Demo](docs/dekstop-mode.mov)
 
 ### Mobile Demo
 
-<video src="docs/mobile-mode.MP4" controls loop></video>
+[▶️ Watch Mobile App Demo](docs/mobile-mode.MP4)
 
 ## Trade-offs and Future Improvements
 
