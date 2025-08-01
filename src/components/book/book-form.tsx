@@ -102,7 +102,7 @@ export function BookForm({ book }: BookFormProps) {
                         const value = e.target.value;
                         field.onChange(value);
 
-                        if (value && !isValidImagePath(value)) {
+                        if (value.trim() && !isValidImagePath(value)) {
                           form.setError("cover", {
                             type: "manual",
                             message: "Please enter a valid image URL or path.",
@@ -114,7 +114,8 @@ export function BookForm({ book }: BookFormProps) {
                     />
                   </FormControl>
                   <FormMessage />
-                  {isValidImagePath(form.watch("cover") ?? "") &&
+                  {form.watch("cover")?.trim() &&
+                    isValidImagePath(form.watch("cover") ?? "") &&
                     !form.formState.errors.cover && (
                       <div className="mt-4">
                         <h3 className="text-lg font-semibold mb-2">

@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function isValidImagePath(path: string): boolean {
-  if (!path) return false;
+  if (!path) return true;
   try {
     const url = new URL(path);
     return url.protocol === "http:" || url.protocol === "https:";
