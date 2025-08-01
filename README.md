@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Reading List Application
 
-## Getting Started
+This is a simple web application for managing a reading list, built with Next.js, React, Prisma, and Tailwind CSS.
 
-First, run the development server:
+## Project Setup
+
+To set up the project locally, follow these steps:
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone <repository-url>
+    cd reading-list-web
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Set up the database:**
+
+    This project uses Prisma for database management. Run the following command to apply migrations and set up your local database:
+
+    ```bash
+    npx prisma migrate dev
+    ```
+
+## Features
+
+This application provides the following features:
+
+*   **Book Management:**
+    *   Add new books to your reading list.
+    *   Edit details of existing books.
+    *   View a list of all books in your collection.
+    *   Search for books within your reading list.
+    *   Confirm dialog before deleting a book.
+    *   Form validation to ensure book data is correctly entered before submission.
+*   **Database Integration:** Utilizes Prisma for efficient database management.
+*   **Comprehensive Testing:** Includes unit and integration tests to ensure reliability and functionality.
+
+## Running the Application
+
+To run the application in development mode:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the development server, usually accessible at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To build the application for production:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+To start the production server:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Running Tests
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To run the tests:
 
-## Deploy on Vercel
+```bash
+npm run test
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Linting
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To run the linter:
+
+```bash
+npm run lint
+```
+
+## Showcase
+
+### Build Success
+
+![Build Success](docs/build.png)
+
+### Test Passed
+
+![Test Passed](docs/test.png)
+
+### Desktop Demo
+
+<video src="docs/dekstop-mode.mov" controls loop></video>
+
+### Mobile Demo
+
+<video src="docs/mobile-mode.MP4" controls loop></video>
+
+## Trade-offs and Future Improvements
+
+With more time, the following areas could be improved:
+
+-   **Pagination/Infinite Scrolling:** For a large reading list, implement pagination or infinite scrolling to improve performance and user experience.
+-   **User Authentication:** Implement user authentication to allow multiple users to manage their own reading lists.
+-   **Image Uploads:** Instead of just storing a URL for the book cover, implement actual image uploads and storage (e.g., using a cloud storage service like AWS S3).
+
+### Made with ❤️ and 🎵 by Pasquale Palena
