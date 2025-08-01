@@ -25,7 +25,6 @@ export async function getBooks(search?: string) {
 
 export async function getBook(id: number) {
   const book = await prisma.book.findUnique({ where: { id } });
-  if (!book) throw new Error("Book not found");
   return book;
 }
 
